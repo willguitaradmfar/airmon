@@ -1,0 +1,9 @@
+#!/bin/sh -e
+
+if [ $# != 1 ]
+then
+	echo "usage: $0 <MAC> ex.: 00:25:9C:76:B2:9B"
+	exit 0
+fi
+
+sudo reaver -i mon0 -b $1 -vv
